@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const titulo = "Sobre mi";
@@ -29,10 +31,7 @@ const skillColor = 'navy';
 		<title>54nti</title>
 	</head>
 	<body>
-        <a href="/">54nti</a>
-        <a href="/blog/">Artículos</a>
-        <a href="/about/">{titulo}</a>
-        
+        <Header />
 		<h1>Hoja para escribir algo personal</h1>
         <p>He aquí algunos datos sobre mí:</p>
         <ul>
@@ -51,6 +50,7 @@ const skillColor = 'navy';
         {finished && <p>¡He terminado este tutorial!</p>}
         
         {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+        <Footer />
         <style define:vars={{skillColor}}>
             h1 {
               color: purple;
@@ -61,5 +61,8 @@ const skillColor = 'navy';
                 font-weight: bold;
             }
           </style>
+          <script>
+            import "../scripts/menu.js";
+          </script>
 	</body>
 </html>

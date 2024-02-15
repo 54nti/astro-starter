@@ -1,5 +1,7 @@
 ---
-
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -11,9 +13,11 @@
 		<title>54nti</title>
 	</head>
 	<body>
-        <a href="/">Inicio</a>
-        <a href="/blog/">Artículos</a>
-        <a href="/about/">Sobre mi</a>
+        <Header />
 		<h1>Mi sitio Astro</h1>
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
 	</body>
 </html>
